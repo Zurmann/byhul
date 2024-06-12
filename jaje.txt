@@ -1,0 +1,16 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+dates = pd.date_range("20130101", periods=4)
+
+df = pd.DataFrame(dates, index=dates, columns=["ABCDEFGH"])
+
+print(dates)
+print(df)
+print(df.describe())
+
+df.plot(kind="bar", color="k")
+plt.title('Marko Ergelasev')
+plt.legend(loc="upper right")
+plt.show()
